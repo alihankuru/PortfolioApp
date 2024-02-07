@@ -1,0 +1,30 @@
+﻿@model List<PortfolioApp.Models.Entity.TblCategory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Category Page</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Category Name</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.Name</td>
+            <td> <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Update</a></td>
+            <td> <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger">Delete</a></td>
+
+        </tr>
+
+    }
+
+</table>
+<td> <a href="/Category/CreateCategory/" class="btn btn-primary"> Add New Category</a></td>

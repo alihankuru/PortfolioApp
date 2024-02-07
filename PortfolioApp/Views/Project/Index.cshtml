@@ -1,0 +1,39 @@
+﻿@model List<PortfolioApp.Models.Entity.TblProject>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Projeler Sayfası</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Project Title</th>
+        <th>Project Description</th>
+        <th>Project Category</th>
+        <th>ImageUrl</th>
+        <th>ProjectUrl</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProjectId</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.TblCategory.Name</td>
+            <td>@item.ImageUrl</td>
+
+            <td> <a href="@item.ProjectUrl" class="btn btn-outline-warning">Github</a></td>
+
+            <td> <a href="/Project/UpdateProject/@item.ProjectId" class="btn btn-outline-success">Update</a></td>
+            <td> <a href="/Project/DeleteProject/@item.ProjectId" class="btn btn-outline-danger">Delete</a></td>
+
+        </tr>
+
+    }
+
+</table>
+<td> <a href="/Project/CreateProject/" class="btn btn-primary"> Add New Project</a></td>

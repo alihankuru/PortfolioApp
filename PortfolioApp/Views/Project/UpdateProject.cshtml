@@ -1,0 +1,34 @@
+﻿@model PortfolioApp.Models.Entity.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateProject</h2>
+
+<body>
+    <form method="post">
+        <label>Project ID</label>
+        <input type="text" class="table table-bordered" readonly value="@Model.ProjectId" name="ProjectId" />
+        <br />
+        <label>Project Title</label>
+        <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
+        <br />
+        <label>Project Category</label>
+        @Html.DropDownListFor(x => x.ProjectCategory, (List<SelectListItem>)ViewBag.v, new { @class = "table table-bordered" })
+        <br />
+        <label>Project Image</label>
+        <input type="text" class="table table-bordered" value="@Model.ImageUrl" name="Header" />
+        <br />
+        <label>Github Link</label>
+        <input type="text" class="table table-bordered" value="@Model.ProjectUrl" name="ProjectUrl" />
+        <br />
+        <label>Project Description</label>
+        <textarea rows="4" class="table table-bordered" value="@Model.Description" name="Description"> @Model.Description</textarea>
+        <br />
+
+        <button class="btn btn-info">Save Changes</button>
+
+        <a href="/Project/Index/" class="btn btn-outline-warning">Go Back</a>
+    </form>
+</body>

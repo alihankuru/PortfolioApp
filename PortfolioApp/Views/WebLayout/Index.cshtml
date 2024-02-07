@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Partial("~/Views/WebLayout/HeadPartial.cshtml")
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    @Html.Partial("~/Views/WebLayout/PageNavbarPartial.cshtml")
+    <!-- End of Page Navbar -->
+    <!-- page header -->
+    @Html.Partial("~/Views/WebLayout/HeaderPartial.cshtml")
+    <!-- end of page header -->
+    <!-- about section -->
+    @Html.Action("AboutSectionPartial")
+    <!-- end of about section -->
+    <!-- service section -->
+    @Html.Action("ServiceSectionPartial")
+    <!-- end of service section -->
+    <!-- portfolio section -->
+    @Html.Partial("~/Views/WebLayout/PortfolioSectionPartial.cshtml")
+    <!-- end of portfolio section -->
+    <!-- pricing section -->
+    @*@Html.Partial("~/Views/WebLayout/PricingSectionPartial.cshtml")*@
+    <!-- end of pricing section -->
+    <!-- section -->
+    @*@Html.Partial("~/Views/WebLayout/SectionPartial.cshtml")*@
+    <!-- end of section -->
+    <!-- testimonial section -->
+    @Html.Partial("~/Views/WebLayout/TestimonialPartial.cshtml")
+    <!-- end of testimonial section -->
+    <!-- blog section -->
+    @*@Html.Partial("~/Views/WebLayout/BlogSectionPartial.cshtml")*@
+    <!-- end of blog section -->
+    <!-- contact section -->
+    @Html.Partial("~/Views/WebLayout/ContactSectionPartial.cshtml")
+    <!-- end of contact section -->
+    <!-- footer -->
+    @Html.Partial("~/Views/WebLayout/FooterSectionPartial.cshtml")
+    <!-- end of page footer -->
+    <!-- core  -->
+    @Html.Partial("~/Views/WebLayout/ScriptPartial.cshtml")
+    
+</body>
+
+</html>

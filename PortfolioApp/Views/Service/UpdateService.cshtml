@@ -1,0 +1,32 @@
+﻿@model PortfolioApp.Models.Entity.TblService
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="text-center">
+    <h2>Update Service</h2>
+</div>
+
+<head>
+
+</head>
+<body>
+
+    <form method="post">
+        <label>Service ID</label>
+        <input type="text" class="table table-bordered" readonly value="@Model.ServiceId" name="ServiceId" />
+        <label>Service Title</label>
+        <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
+        <label>Service Description</label>
+        <input type="text" class="table table-bordered" value="@Model.Description" name="Description" />
+        <label>Image Url</label>
+        <input type="text" class="table table-bordered" value="@Model.ImageUrl" name="ImageUrl" />
+        <br />
+
+        <button class="btn btn-info" type="submit">Save Changes</button>
+        <a href="/Service/Index/" class="btn btn-outline-warning">Go Back</a>
+
+    </form>
+
+</body>

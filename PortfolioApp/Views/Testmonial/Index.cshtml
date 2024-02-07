@@ -1,0 +1,35 @@
+﻿@model List<PortfolioApp.Models.Entity.TblTestmonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Testmonial Page</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name Surname</th>
+        <th>Description</th>
+        <th>ImageUrl</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TestmonialId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Description</td>
+            <td>@item.ImageUrl</td>
+
+            <td> <a href="/Testmonial/UpdateTestmonial/@item.TestmonialId" class="btn btn-outline-success">Update</a></td>
+            <td> <a href="/Testmonial/DeleteTestmonial/@item.TestmonialId" class="btn btn-outline-danger">Delete</a></td>
+
+        </tr>
+
+    }
+
+</table>
+<td> <a href="/Testmonial/CreateTestmonial/" class="btn btn-primary"> Add New Category</a></td>

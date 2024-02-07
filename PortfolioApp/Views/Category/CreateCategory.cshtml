@@ -1,0 +1,21 @@
+﻿@model PortfolioApp.Models.Entity.TblCategory
+@using System.Web.Mvc.Html
+
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="text-center">
+    <h2>Add New Category</h2>
+</div>
+
+
+
+<form method="post">
+    <label>Category Name</label>
+    </br>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <button class="btn btn-info" type="submit">Submit</button>
+    <a href="/Category/Index/" class="btn btn-outline-warning">Go Back</a>
+</form>
