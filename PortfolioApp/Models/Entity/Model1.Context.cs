@@ -12,6 +12,8 @@ namespace PortfolioApp.Models.Entity
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class PortfolioDBEntities : DbContext
     {
@@ -31,5 +33,11 @@ namespace PortfolioApp.Models.Entity
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblService> TblService { get; set; }
         public virtual DbSet<TblTestmonial> TblTestmonial { get; set; }
+        public virtual DbSet<TblSkill> TblSkill { get; set; }
+    
+        public virtual ObjectResult<string> GetLastSkillTitle()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastSkillTitle");
+        }
     }
 }
