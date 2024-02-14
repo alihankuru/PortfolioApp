@@ -1,0 +1,13 @@
+﻿@model List<PortfolioApp.Models.Entity.TblSkill>
+
+<div class="skill-mf">
+    <p class="title-s">Skill</p>
+    @foreach (var item in Model)
+    {
+    <span>@item.SkillTitle</span> <span class="pull-right">@item.value%</span>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: @item.value%;" aria-valuenow="@item.value" aria-valuemin="0"
+             aria-valuemax="100"></div>
+    </div>
+    }
+</div>

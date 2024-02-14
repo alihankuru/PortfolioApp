@@ -21,7 +21,7 @@ namespace PortfolioApp.Controllers
             ViewBag.skillAverage = db.TblSkill.Average(X => X.value);
             ViewBag.lastSkillTitleName = db.GetLastSkillTitle().FirstOrDefault();
             ViewBag.skillCount = db.TblSkill.Count();
-
+            ViewBag.coreCategoryProjectCount=db.TblProject.Where(x=>x.ProjectCategory==1002).Count();  
 
 
             return View();

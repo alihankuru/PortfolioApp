@@ -34,6 +34,8 @@ namespace PortfolioApp.Models.Entity
         public virtual DbSet<TblService> TblService { get; set; }
         public virtual DbSet<TblTestmonial> TblTestmonial { get; set; }
         public virtual DbSet<TblSkill> TblSkill { get; set; }
+        public virtual DbSet<TblFeature> TblFeature { get; set; }
+        public virtual DbSet<TblProfile> TblProfile { get; set; }
     
         public virtual ObjectResult<string> GetLastSkillTitle()
         {
