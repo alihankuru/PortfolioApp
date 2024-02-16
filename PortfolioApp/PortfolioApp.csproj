@@ -656,6 +656,14 @@
     <Content Include="Views\Default\FeaturePartial.cshtml" />
     <Content Include="Views\Default\ProfilePartial.cshtml" />
     <Content Include="Views\Default\SkillPartial.cshtml" />
+    <Content Include="Views\Default\AboutPartial.cshtml" />
+    <Content Include="Views\Default\ServicePartial.cshtml" />
+    <Content Include="Views\Default\WidgetPartial.cshtml" />
+    <Content Include="Views\Default\ProjectPartial.cshtml" />
+    <Content Include="Views\Default\TestmonialPartial.cshtml" />
+    <Content Include="Views\Default\ContactPartial.cshtml" />
+    <Content Include="Views\Default\ScriptPartial.cshtml" />
+    <Content Include="Template\devfolio-master\devfolio-master\img\AlihanKuru_Cv.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

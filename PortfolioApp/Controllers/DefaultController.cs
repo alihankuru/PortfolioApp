@@ -45,5 +45,62 @@ namespace PortfolioApp.Controllers
             return PartialView(values);
         }
 
+        public PartialViewResult AboutPartial()
+        {
+            var values = db.TblAbout.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult ServicePartial()
+        {
+            var values = db.TblService.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult WidgetPartial()
+        {
+            
+            return PartialView();
+        }
+
+        public PartialViewResult ProjectPartial()
+        {
+            var values = db.TblProject.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult TestmonialPartial()
+        {
+            var values = db.TblTestmonial.ToList();
+            return PartialView(values);
+        }
+
+        [HttpGet]
+        public PartialViewResult ContactPartial()
+        {
+           
+            return PartialView();
+        }
+
+
+        [HttpPost]
+        public PartialViewResult ContactPartial(TblContact p)
+        {
+            p.Date = DateTime.Now;
+            db.TblContact.Add(p);
+            db.SaveChanges();
+            return PartialView();
+        }
+
+
+        public PartialViewResult ScriptPartial()
+        {
+            
+            return PartialView();
+        }
+
+
+
+
     }
 }
