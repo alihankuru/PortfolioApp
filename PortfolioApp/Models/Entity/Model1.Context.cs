@@ -36,10 +36,16 @@ namespace PortfolioApp.Models.Entity
         public virtual DbSet<TblSkill> TblSkill { get; set; }
         public virtual DbSet<TblFeature> TblFeature { get; set; }
         public virtual DbSet<TblProfile> TblProfile { get; set; }
+        public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
     
         public virtual ObjectResult<string> GetLastSkillTitle()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastSkillTitle");
+        }
+    
+        public virtual ObjectResult<string> GetLastProjectName()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("GetLastProjectName");
         }
     }
 }

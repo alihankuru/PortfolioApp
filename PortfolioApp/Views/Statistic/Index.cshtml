@@ -3,11 +3,90 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
+<html>
+<head>
+    <style>
+        .widget-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .widget {
+            flex: 0 0 calc(33.33% - 10px);
+            max-width: calc(33.33% - 10px);
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .widget-title {
+            font-weight: bold;
+        }
+
+        .widget-content {
+            font-size: 20px; /* Adjust the font size based on your preference */
+            /* Add any additional styling for the content */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>İstatistikler</h1>
+    <div class="widget-container">
 
 
-<div class="alert alert-danger">Kategori Sayısı : @ViewBag.categoryCount</div>
-<div class="alert alert-danger">Proje Sayısı: @ViewBag.projectCount</div>
-<div class="alert alert-danger">Proje Sayısı: @ViewBag.skillCount</div>
-<div class="alert alert-danger">Proje Sayısı: @ViewBag.skillAverage</div>
-<div class="alert alert-danger">Son eklenen Yetenek: @ViewBag.lastSkillTitleName</div>
-<div class="alert alert-danger">Proje Sayısı: @ViewBag.coreCategoryProjectCount</div>
+        <div class="widget alert alert-danger">
+            <div class="widget-title">Kategori Sayısı</div>
+            <div class="widget-content">@ViewBag.categoryCount</div>
+        </div>
+
+        <div class="widget alert alert-info">
+            <div class="widget-title">Toplam Proje Sayısı</div>
+            <div class="widget-content">@ViewBag.projectCount</div>
+        </div>
+
+        <div class="widget alert alert-primary">
+            <div class="widget-title">Toplam Yetenek Sayısı</div>
+            <div class="widget-content">@ViewBag.skillCount</div>
+        </div>
+
+        <div class="widget alert alert-warning">
+            <div class="widget-title">Yetenek Ortalaması</div>
+            <div class="widget-content">@ViewBag.skillAverage</div>
+        </div>
+
+        <div class="widget alert alert-danger">
+            <div class="widget-title">Son Eklenen Yetenek</div>
+            <div class="widget-content">@ViewBag.lastSkillTitleName</div>
+        </div>
+
+        <div class="widget alert alert-info">
+            <div class="widget-title">Toplam Proje Sayısı </div>
+            <div class="widget-content">@ViewBag.coreCategoryProjectCount</div>
+        </div>
+
+        <div class="widget alert alert-info">
+            <div class="widget-title">Toplam Sosyal Medya Sayısı</div>
+            <div class="widget-content">@ViewBag.socialMediaCount</div>
+        </div>
+
+        <div class="widget alert alert-info">
+            <div class="widget-title">Toplam Hizmet Sayısı</div>
+            <div class="widget-content">@ViewBag.testimonialCount</div>
+        </div>
+
+        <div class="widget alert alert-info">
+            <div class="widget-title">Son eklenen proje ismi</div>
+            <div class="widget-content">@ViewBag.lastProjectName</div>
+        </div>
+
+
+        <div class="widget alert alert-info">
+            <div class="widget-title">Gelen Mesaj Sayısı</div>
+            <div class="widget-content">@ViewBag.ContactCount</div>
+        </div>
+
+
+    </div>
+</body>
+</html>

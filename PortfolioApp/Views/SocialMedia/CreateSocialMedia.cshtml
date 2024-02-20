@@ -1,0 +1,27 @@
+﻿@model PortfolioApp.Models.Entity.TblSocialMedia
+@{
+    ViewBag.Title = "CreateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>CreateSocialMedia</h2>
+
+
+<form method="post">
+    <label>Social Media Name</label>
+
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </br>
+    <label>Url</label>
+
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    </br>
+    <label>Social media Image</label>
+
+    @Html.TextBoxFor(x => x.Photo, new { @class = "form-control" })
+    </br>
+    <button class="btn btn-info" type="submit">Submit</button>
+    <a href="/SocialMedia/Index/" class="btn btn-outline-warning">Geri</a>
+</form>
+
+

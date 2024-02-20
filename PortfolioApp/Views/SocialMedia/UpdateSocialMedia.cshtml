@@ -1,0 +1,31 @@
+﻿@model PortfolioApp.Models.Entity.TblSocialMedia
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>UpdateSocialMedia</h2>
+
+
+<head>
+
+</head>
+<body>
+
+    <form method="post">
+        <label>Social Media ID</label>
+        <input type="text" class="table table-bordered" readonly value="@Model.SocialMediaId" name="SocialMediaId" />
+        <label>Social Media Name</label>
+        <input type="text" class="table table-bordered" value="@Model.Name" name="Name" />
+        <label>Url</label>
+        <input type="text" class="table table-bordered" value="@Model.Url" name="Url" />
+        <label>Photo Url</label>
+        <input type="text" class="table table-bordered" value="@Model.Photo" name="Photo" />
+        <br />
+
+        <button class="btn btn-info" type="submit">Save Changes</button>
+        <a href="/SocialMedia/Index/" class="btn btn-outline-warning">Geri</a>
+
+    </form>
+
+</body>

@@ -20,8 +20,12 @@ namespace PortfolioApp.Controllers
             ViewBag.skillCount=db.TblSkill.Count();
             ViewBag.skillAverage = db.TblSkill.Average(X => X.value);
             ViewBag.lastSkillTitleName = db.GetLastSkillTitle().FirstOrDefault();
-            ViewBag.skillCount = db.TblSkill.Count();
-            ViewBag.coreCategoryProjectCount=db.TblProject.Where(x=>x.ProjectCategory==1002).Count();  
+            
+            ViewBag.coreCategoryProjectCount=db.TblProject.Where(x=>x.ProjectCategory==1002).Count();
+            ViewBag.socialMediaCount = db.TblSocialMedia.Count();
+            ViewBag.testimonialCount = db.TblTestmonial.Count();
+            ViewBag.lastProjectName = db.GetLastProjectName().FirstOrDefault();
+            ViewBag.ContactCount=db.TblContact.Count();
 
 
             return View();
