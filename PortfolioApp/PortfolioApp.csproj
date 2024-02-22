@@ -132,7 +132,6 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
@@ -145,9 +144,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\About.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Entity\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,9 +189,6 @@
     <Compile Include="Models\Entity\TblTestmonial.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Project.cs" />
-    <Compile Include="Models\Service.cs" />
-    <Compile Include="Models\Testmonial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -262,9 +255,12 @@
     <Content Include="Template\devfolio-master\devfolio-master\css\style-red.css" />
     <Content Include="Template\devfolio-master\devfolio-master\css\style-sky-blue.css" />
     <Content Include="Template\devfolio-master\devfolio-master\css\style.css" />
+    <Content Include="Template\devfolio-master\devfolio-master\img\AlihanKuru.jpg" />
     <Content Include="Template\devfolio-master\devfolio-master\img\apple-touch-icon.png" />
     <Content Include="Template\devfolio-master\devfolio-master\img\counters-bg.jpg" />
+    <Content Include="Template\devfolio-master\devfolio-master\img\desktopimage.jpg" />
     <Content Include="Template\devfolio-master\devfolio-master\img\favicon.png" />
+    <Content Include="Template\devfolio-master\devfolio-master\img\girlimage.jpeg" />
     <Content Include="Template\devfolio-master\devfolio-master\img\intro-bg - Copy.jpg" />
     <Content Include="Template\devfolio-master\devfolio-master\img\intro-bg.jpg" />
     <Content Include="Template\devfolio-master\devfolio-master\img\overlay-bg.jpg" />
@@ -675,10 +671,10 @@
     <Content Include="Views\SocialMedia\Index.cshtml" />
     <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
     <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Dashboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

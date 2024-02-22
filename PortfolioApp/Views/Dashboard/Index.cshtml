@@ -1,0 +1,36 @@
+﻿@model List<PortfolioApp.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div>
+    <canvas id="categoryPieChart" width="400" height="400"></canvas>
+</div>
+
+@section scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+    var categoryData = @Html.Raw(Json.Encode(Model));
+
+    var ctx = document.getElementById('categoryPieChart').getContext('2d');
+
+    var myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: categoryData.map(item => item.Name),
+            datasets: [{
+                data: categoryData.map(item => item.categoryCount),
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(54, 162, 235, 0.7)',
+                    'rgba(255, 206, 86, 0.7)',
+                    // Add more colors as needed
+                ],
+            }],
+        },
+    });
+    </script>
+}

@@ -59,7 +59,11 @@ namespace PortfolioApp.Controllers
 
         public PartialViewResult WidgetPartial()
         {
-            
+            ViewBag.categoryCount = db.TblCategory.Count();
+            ViewBag.projectCount = db.TblProject.Count();
+            ViewBag.socialMediaCount = db.TblSocialMedia.Count();
+            ViewBag.skillCount = db.TblSkill.Count();
+
             return PartialView();
         }
 
@@ -78,7 +82,7 @@ namespace PortfolioApp.Controllers
         [HttpGet]
         public PartialViewResult ContactPartial()
         {
-           
+            
             return PartialView();
         }
 

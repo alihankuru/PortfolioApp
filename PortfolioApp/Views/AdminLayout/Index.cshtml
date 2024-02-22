@@ -15,9 +15,10 @@
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
 
-           
+
             @Html.Partial("~/Views/AdminLayout/NavbarPartial.cshtml")
             @RenderBody()
+            @RenderSection("scripts", required: false)
         </div>
 
     </div>
